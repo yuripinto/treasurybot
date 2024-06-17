@@ -7,7 +7,7 @@ from product import Product
 class URLProcessor:
     domain_xpath_map = {
         'www.magazineluiza.com.br': '//*[@data-testid="price-value"]',
-        'www.amazon.com.br': '//span[contains(@class,"a-color-price")]'
+        'www.extra.com.br': '//*[@data-testid="product-price-value"]'
     }
 
     @staticmethod
@@ -30,7 +30,7 @@ class URLProcessor:
         #options.add_argument("--disable-dev-shm-usage")
 
         driver = webdriver.Chrome(options=options)
-        driver.minimize_window()
+        #driver.minimize_window()
         driver.get(url)
 
         new_product = Product(
