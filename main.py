@@ -3,11 +3,8 @@ import time
 import random
 from product import Product
 from url import URLProcessor
-#from rocketry import Rocketry
 
-#app = Rocketry()
 
-#@app.task('every 5 minute')
 def start_crawler():
     logging.info('Reading url list from file')
     url_list = URLProcessor.load_url_list('urls.txt')
@@ -22,4 +19,3 @@ def start_crawler():
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     start_crawler()
-    #app.run()
